@@ -72,7 +72,7 @@ def main():
                 prediction = predict_news(news_text)
                 if prediction == 0:
                     st.write("Prediction: Real News")
-                else:
+                elif prediction ==1:
                     st.write("Prediction: Fake News")
             else:
                 st.write("Please enter some text to detect.")
