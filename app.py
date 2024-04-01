@@ -11,6 +11,9 @@ from sklearn.naive_bayes import MultinomialNB
 from joblib import load, dump  # Use joblib to save and load models
   # Use joblib to save and load models
 from gensim.models import Word2Vec
+import nltk
+nltk.download('stopwords')
+
 
 # Function to preprocess text
 def preprocess_text(text):
@@ -66,7 +69,7 @@ def main():
         if st.button("Detect"):
             if news_text.strip() != "":
                 prediction = predict_news(news_text)
-                if prediction == 0:
+                if prediction == 1:
                     st.write("Prediction: Real News")
                 else:
                     st.write("Prediction: Fake News")
