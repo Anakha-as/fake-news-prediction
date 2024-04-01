@@ -32,7 +32,8 @@ classifier = joblib.load('naive_bayes_model.pkl')
 tfidf_v = joblib.load('tfidf_vectorizer.pkl')
 
 # Load Word2Vec model
-word2vec_model = Word2Vec.load('word2vec_model.bin')
+word2vec_model=Word2Vec()
+# word2vec_model = Word2Vec.load('word2vec_model.bin')
 
 # Function to generate document embeddings using Word2Vec
 def document_embedding(review, model):
