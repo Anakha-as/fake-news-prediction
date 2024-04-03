@@ -26,7 +26,7 @@ def preprocess_text(text):
     return review
 
 # Load the Naive Bayes model
-classifier = joblib.load('naive_bayes_model.pkl')
+classifier = joblib.load('passive_agressive_classifier.pkl')
 
 # Load TF-IDF vectorizer
 tfidf_v = joblib.load('tfidf_vectorizer.pkl')
