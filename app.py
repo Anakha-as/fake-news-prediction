@@ -70,9 +70,9 @@ def main():
         if st.button("Detect"):
             if news_text.strip() != "":
                 prediction = predict_news(news_text)
-                if prediction == 0:
+                if prediction == 1:
                     st.write("Prediction: Real News")
-                elif prediction ==1:
+                elif prediction ==0:
                     st.write("Prediction: Fake News")
             else:
                 st.write("Please enter some text to detect.")
